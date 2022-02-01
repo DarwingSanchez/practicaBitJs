@@ -66,3 +66,32 @@ for (let index = 0; index < palabra.length; index++) {
 console.log(`palabra: ${palabra}`)
 console.log(`position: ${position}`)
 console.log('resultado:', resultado.join(''))
+
+
+
+/****************************************************************Ejercicio 3 (Timer en un ciclo FOR)***********************************************************/
+
+let minute = 13; 
+let seconds = 0; 
+
+let StringM;
+let StringS;
+
+
+for (let index = 0; index < 1000; index++) {
+    if(index == 0) console.log(`0${minute}:0${seconds}`)
+
+    seconds++
+    
+    seconds < 10 ? StringS = `0${seconds}` : StringS = `${seconds}`
+    minute < 10 ? StringM = `0${minute}` : StringM = `${minute}`
+
+    if(seconds >= 60 ){
+        minute++ 
+        minute >= 10 ? console.log(`${minute}:00`) : console.log(`0${minute}:00`)
+        seconds = 0   
+    }else{
+        console.log(`${StringM}:${StringS}`)
+    }
+}
+
